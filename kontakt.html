@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Kontakt</title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Dienstleistungen</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="impressum.html">Impressum</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="Warenkorb.html">Warenkorb</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Kontakt</h1>
+
+        <section>
+            <h2>Nimm Kontakt mit uns auf</h2>
+
+            <p>Du hast Fragen, Anregungen oder möchtest mehr über unsere Dienstleistungen erfahren? Kontaktiere uns gerne!</p>
+
+            <form action="process_contact.php" method="post">
+                <label for="name">Dein Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Deine E-Mail-Adresse:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Deine Nachricht:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Nachricht senden</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

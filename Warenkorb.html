@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap" rel="stylesheet">
+    <title>Warenkorb</title>
+    <script src="logic.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <form action="index.html">
+                <button type="submit">Home</button>
+            </form>
+
+            <form action="services.html">
+                <button type="submit">Services</button>
+            </form>
+
+            <form action="kontakt.html">
+                <button type="submit">Kontakt</button>
+            </form>
+
+            <form action="impressum.html">
+                <button type="submit">Impressum</button>
+            </form>
+
+            <form action="shop.html">
+                <button type="submit">Shop</button>
+            </form>
+
+            <form action="Warenkorb.html">
+                <button type="submit">Warenkorb</button>
+            </form>
+        </nav>
+    </header>
+
+    <div class="cart">
+        <h2>Warenkorb</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Produkt</th>
+                    <th>Preis</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <!-- Hier werden die Produkte eingefügt -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Gesamtsumme:</td>
+                    <td id="total-price">0</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <script>
+        // logic.js
+
+// Ein leeres Array, um die im Warenkorb befindlichen Artikel zu speichern
+let cartItems = [];
+
+// Funktion zum Hinzufügen eines Produkts zum Warenkorb
+function addToCart(productName, price) {
+    const newItem = {
+        name: productName,
+        price: price
+    };
+
+    // Artikel dem Warenkorb hinzufügen
+    cartItems.push(newItem);
+
+    // Warenkorb aktualisieren
+    updateCart();
+}
+
+// Funktion zum Aktualisieren des Warenkorb-HTML und der Gesamtsumme
+function updateCart() {
+    const cartTableBody = document.getElementById("cart-items");
+    const totalPriceElement = document.getElementById("total-price");
+
+    // Warenkorb-HTML aktualisieren
+    cartTableBody.innerHTML = "";
+    cartItems.forEach(item => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${item.name}</td>
+            <td>${item.price} €</td>
+            <td></td>
+        `;
+        cartTableBody.appendChild(row);
+    });
+
+    // Gesamtsumme berechnen und aktualisieren
+    const totalPrice = cartItems.reduce((total, item) => total + item.price, 0);
+    totalPriceElement.textContent = totalPrice.toFixed(2); // Zwei Dezimalstellen für den Preis
+}
+
+    </script>
+
+</body>
+
+</html>

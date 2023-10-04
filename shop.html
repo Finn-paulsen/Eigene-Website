@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap" rel="stylesheet">
+    <title>Shop</title>
+    <script src="logic.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <form action="index.html">
+                <button type="submit">Home</button>
+            </form>
+            <form action="services.html">
+                <button type="submit">Services</button>
+            </form>
+            <form action="kontakt.html">
+                <button type="submit">Kontakt</button>
+            </form>
+            <form action="impressum.html">
+                <button type="submit">Impressum</button>
+            </form>
+            <form action="shop.html">
+                <button type="submit">Shop</button>
+            </form>
+            <form action="Warenkorb.html">
+                <button type="submit">Warenkorb</button>
+            </form>
+        </nav>
+    </header>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Kategorie</th>
+                <th>Artikel</th>
+                <th>Preis</th>
+                <th>In den Warenkorb</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td rowspan="5">Mainboards</td>
+                <td>ASUS ROG Strix B550-F Gaming</td>
+                <td>189,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('ASUS ROG Strix B550-F Gaming', 189)"></td>
+            </tr>
+            <tr>
+                <td>MSI MPG B450 Gaming Plus</td>
+                <td>119,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('MSI MPG B450 Gaming Plus', 119)"></td>
+            </tr>
+            <tr>
+                <td>GIGABYTE Z590 AORUS Elite</td>
+                <td>229,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('GIGABYTE Z590 AORUS Elite', 229)"></td>
+            </tr>
+            <tr>
+                <td>ASRock B460 Steel Legend</td>
+                <td>149,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('ASRock B460 Steel Legend', 149)"></td>
+            </tr>
+            <tr>
+                <td>EVGA Z490 FTW WiFi 6</td>
+                <td>199,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('EVGA Z490 FTW WiFi 6', 199)"></td>
+            </tr>
+
+            <tr>
+                <td rowspan="5">Netzteile</td>
+                <td>EVGA Supernova 850 G5 850W Netzteil</td>
+                <td>149,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('EVGA Supernova 850 G5', 149)"></td>
+            </tr>
+            <tr>
+                <td>Corsair RM850x 850W Netzteil</td>
+                <td>139,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('Corsair RM850x', 139)"></td>
+            </tr>
+            <tr>
+                <td>Seasonic Focus GX-850 850W Netzteil</td>
+                <td>159,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('Seasonic Focus GX-850', 159)"></td>
+            </tr>
+            <tr>
+                <td>be quiet! Straight Power 11 750W Netzteil</td>
+                <td>129,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('be quiet! Straight Power 11', 129)"></td>
+            </tr>
+            <tr>
+                <td>Thermaltake Toughpower GF1 750W Netzteil</td>
+                <td>139,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('Thermaltake Toughpower GF1', 139)"></td>
+            </tr>
+
+            <tr>
+                <td rowspan="5">Gehäuse</td>
+                <td>NZXT H510i Compact ATX Mid-Tower</td>
+                <td>99,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('NZXT H510i Compact ATX Mid-Tower', 99)"></td>
+            </tr>
+            <tr>
+                <td>Corsair iCUE 4000X RGB Mid-Tower</td>
+                <td>129,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('Corsair iCUE 4000X RGB Mid-Tower', 129)"></td>
+            </tr>
+            <tr>
+                <td>Fractal Design Meshify C ATX Mid Tower</td>
+                <td>89,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('Fractal Design Meshify C ATX Mid Tower', 89)"></td>
+            </tr>
+            <tr>
+                <td>Phanteks Eclipse P400A ATX Mid-Tower</td>
+                <td>79,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('Phanteks Eclipse P400A ATX Mid-Tower', 79)"></td>
+            </tr>
+            <tr>
+                <td>Cooler Master MasterBox Q300L Micro-ATX</td>
+                <td>49,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('Cooler Master MasterBox Q300L Micro-ATX', 49)"></td>
+            </tr>
+
+            <tr>
+                <td rowspan="5">Grafikkarten</td>
+                <td>Nvidia GeForce RTX 3080 Grafikkarte</td>
+                <td>1.199,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('Nvidia GeForce RTX 3080', 1199)"></td>
+            </tr>
+            <tr>
+                <td>AMD Radeon RX 6900 XT Grafikkarte</td>
+                <td>1.099,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('AMD Radeon RX 6900 XT', 1099)"></td>
+            </tr>
+            <tr>
+                <td>Nvidia GeForce RTX 3060 Ti Grafikkarte</td>
+                <td>549,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('Nvidia GeForce RTX 3060 Ti', 549)"></td>
+            </tr>
+            <tr>
+                <td>AMD Radeon RX 5700 XT Grafikkarte</td>
+                <td>449,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('AMD Radeon RX 5700 XT', 449)"></td>
+            </tr>
+            <tr>
+                <td>MSI Gaming GeForce GTX 1660 Super</td>
+                <td>299,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('MSI Gaming GeForce GTX 1660 Super', 299)"></td>
+            </tr>
+
+            <tr>
+                <td rowspan="5">CPUs</td>
+                <td>Intel Core i7-11700K Prozessor</td>
+                <td>479,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('Intel Core i7-11700K', 479)"></td>
+            </tr>
+            <tr>
+                <td>AMD Ryzen 9 5900X Prozessor</td>
+                <td>569,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('AMD Ryzen 9 5900X', 569)"></td>
+            </tr>
+            <tr>
+                <td>Intel Core i5-11600K Prozessor</td>
+                <td>269,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('Intel Core i5-11600K', 269)"></td>
+            </tr>
+            <tr>
+                <td>AMD Ryzen 5 5600X Prozessor</td>
+                <td>279,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('AMD Ryzen 5 5600X', 279)"></td>
+            </tr>
+            <tr>
+                <td>Intel Core i9-11900K Prozessor</td>
+                <td>679,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('Intel Core i9-11900K', 679)"></td>
+            </tr>
+
+            <tr>
+                <td rowspan="5">Tastaturen</td>
+                <td>Logitech G Pro X Mechanical Gaming Keyboard</td>
+                <td>149,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('Logitech G Pro X Mechanical', 149)"></td>
+            </tr>
+            <tr>
+                <td>Corsair K95 RGB Platinum XT Mechanical Keyboard</td>
+                <td>199,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('Corsair K95 RGB Platinum XT', 199)"></td>
+            </tr>
+            <tr>
+                <td>Razer BlackWidow Elite Mechanical Gaming Keyboard</td>
+                <td>129,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('Razer BlackWidow Elite Mechanical', 129)"></td>
+            </tr>
+            <tr>
+                <td>SteelSeries Apex Pro Mechanical Gaming Keyboard</td>
+                <td>229,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('SteelSeries Apex Pro Mechanical', 229)"></td>
+            </tr>
+            <tr>
+                <td>Cooler Master CK552 Gaming Mechanical Keyboard</td>
+                <td>79,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('Cooler Master CK552 Gaming Mechanical', 79)"></td>
+            </tr>
+
+            <tr>
+                <td rowspan="5">Mäuse</td>
+                <td>Logitech G Pro Wireless Gaming Mouse</td>
+                <td>129,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('Logitech G Pro Wireless', 129)"></td>
+            </tr>
+            <tr>
+                <td>Razer DeathAdder Elite Gaming Mouse</td>
+                <td>69,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('Razer DeathAdder Elite', 69)"></td>
+            </tr>
+            <tr>
+                <td>Corsair Dark Core RGB/SE Gaming Mouse</td>
+                <td>89,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('Corsair Dark Core RGB/SE', 89)"></td>
+            </tr>
+            <tr>
+                <td>SteelSeries Rival 600 Gaming Mouse</td>
+                <td>79,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('SteelSeries Rival 600', 79)"></td>
+            </tr>
+            <tr>
+                <td>Logitech G502 HERO Gaming Mouse</td>
+                <td>49,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('Logitech G502 HERO', 49)"></td>
+            </tr>
+
+            <tr>
+                <td rowspan="5">Monitore</td>
+                <td>ASUS VG279Q 27" Full HD 1080p IPS Monitor</td>
+                <td>299,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('ASUS VG279Q 27&quot;', 299)"></td>
+            </tr>
+            <tr>
+                <td>Dell S2719DGF 27" QHD Free Sync Monitor</td>
+                <td>349,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('Dell S2719DGF 27&quot;', 349)"></td>
+            </tr>
+            <tr>
+                <td>LG 34GL750-B 34" UltraWide Gaming Monitor</td>
+                <td>449,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('LG 34GL750-B 34&quot;', 449)"></td>
+            </tr>
+            <tr>
+                <td>Acer Predator XB271HU 27" Gaming Monitor</td>
+                <td>599,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('Acer Predator XB271HU 27&quot;', 599)"></td>
+            </tr>
+            <tr>
+                <td>Samsung Odyssey G7 32" Curved Gaming Monitor</td>
+                <td>699,00 €</td>
+                <td><input type="checkbox" onClick="addToCart('Samsung Odyssey G7 32&quot;', 699)"></td>
+            </tr>
+            
+        </tbody>
+    </table>
+</body>
+
+</html>
